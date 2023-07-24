@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="calc">
+                <form>
+                    <div  class="disp">
+                        <input type="text" name="disp">
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="disp.value = ''">
+                        <input type="button" value="DE" onclick="disp.value = disp.value.toString().slice(0,-1)">
+                        <input type="button" value="." onclick="disp.value += '.'">
+                        <input type="button" value="/" onclick="disp.value += '/'">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="disp.value += '7'">
+                        <input type="button" value="8" onclick="disp.value += '8'">
+                        <input type="button" value="9" onclick="disp.value += '9'">
+                        <input type="button" value="*" onclick="disp.value += '*'">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="disp.value += '4'">
+                        <input type="button" value="5" onclick="disp.value += '5'">
+                        <input type="button" value="6" onclick="disp.value += '6'">
+                        <input type="button" value="-" onclick="disp.value += '-'">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="disp.value += '1'">
+                        <input type="button" value="2" onclick="disp.value += '2'">
+                        <input type="button" value="3" onclick="disp.value += '3'">
+                        <input type="button" value="+" onclick="disp.value += '+'">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="disp.value += '00'">
+                        <input type="button" value="0" onclick="disp.value += '0'">
+                        <input type="button" value="=" style="width: 145px;" onclick="disp.value=eval(disp.value)">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
