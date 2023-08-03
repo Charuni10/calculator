@@ -1,9 +1,10 @@
+// Imports
 import React, { useState } from 'react';
 import './App.css';
 
 function App() {
   const [result,setResult]=useState<string>("");
-   
+  //function for each button
   const handleButton=(label: string):void=>{
     switch (label ) {
       case "AC":{
@@ -14,6 +15,7 @@ function App() {
         setResult((prevResult)=>prevResult.slice(0,-1));
         break;
       }
+      //evaluate function is used for calculation
       case "=":{
         setResult((prevResult)=>eval(prevResult));
         break;
@@ -30,6 +32,7 @@ function App() {
     <div className="container">
     
       <div className='calc'>
+        {/* output will be seen here */}
         <div id="disp" >
           <p id='res' title={result}>{result}</p>
         </div>
